@@ -1,0 +1,4 @@
+Agentes de IA utilizam técnicas de processamento de linguagem natural.
+Processamento de linguagem natural é importante para sistemas inteligentes.
+RAG combina busca e geração para melhorar respostas.
+Agentes utilizam busca para recuperar informações relevantes.
