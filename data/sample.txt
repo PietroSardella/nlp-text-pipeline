@@ -1,4 +1,15 @@
-Agentes de IA utilizam técnicas de processamento de linguagem natural.
-Processamento de linguagem natural é importante para sistemas inteligentes.
-RAG combina busca e geração para melhorar respostas.
-Agentes utilizam busca para recuperar informações relevantes.
+Agentes de IA são sistemas capazes de tomar decisões automaticamente com base em regras e modelos.
+Agentes inteligentes utilizam ferramentas externas para executar ações específicas.
+Um agente pode combinar raciocínio e recuperação de informações para responder perguntas complexas.
+
+RAG significa Retrieval-Augmented Generation e combina busca com geração de texto.
+Em sistemas RAG, documentos relevantes são recuperados antes da geração da resposta.
+A qualidade do RAG depende diretamente do mecanismo de retrieval utilizado.
+
+Machine Learning supervisionado utiliza dados rotulados para treinar modelos preditivos.
+Modelos de classificação aprendem padrões a partir de exemplos históricos.
+Redes neurais profundas são utilizadas em tarefas como visão computacional e NLP.
+
+Paris é a capital da França.
+O Brasil está localizado na América do Sul.
+O Monte Everest é a montanha mais alta do mundo.

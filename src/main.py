@@ -1,26 +1,36 @@
-from loader import load_text
+from loader import load_documents
 from cleaner import clean_text
-from tokenizer import tokenize
-from vectorizer import generate_tfidf
+from embedder import generate_embeddings, embed_query
+from retriever import search
 
 
 def main():
-    text = load_text("data/sample.txt")
-    cleaned = clean_text(text)
+    documents = load_documents("data/sample.txt")
 
-    tokens = tokenize(cleaned)
-    print("Tokens:")
-    print(tokens)
+    cleaned_docs = [clean_text(doc) for doc in documents]
+
+    print("Gerando embeddings...")
+    doc_embeddings = generate_embeddings(cleaned_docs)
+
+    print("Shape dos embeddings:")
+    print(doc_embeddings.shape)
     print()
 
-    vectorizer, matrix = generate_tfidf(cleaned)
+    query = input("Digite sua pergunta: ")
+    cleaned_query = clean_text(query)
 
-    print("Features (vocabulário):")
-    print(vectorizer.get_feature_names_out())
-    print()
+    query_vector = embed_query(cleaned_query)
 
-    print("Shape da matriz TF-IDF:")
-    print(matrix.shape)
+    results, scores = search(query_vector, doc_embeddings, documents)
+
+    # ⬇️ ESTE BLOCO PRECISA ESTAR DENTRO DA FUNÇÃO
+    if not results:
+        print("\nNenhum documento relevante encontrado.")
+    else:
+        print("\nDocumentos retornados:")
+        for doc, score in zip(results, scores):
+            print(f"- {doc}")
+            print(f"  Score: {score:.4f}")
 
 
 if __name__ == "__main__":
