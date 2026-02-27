@@ -1,7 +1,7 @@
-from loader import load_documents
-from cleaner import clean_text
-from embedder import generate_embeddings, embed_query
-from retriever import search
+from src.core.loader import load_documents
+from src.core.cleaner import clean_text
+from src.rag.embedder import generate_embeddings, embed_query
+from src.rag.retriever import search
 
 
 def main():
@@ -23,7 +23,6 @@ def main():
 
     results, scores = search(query_vector, doc_embeddings, documents)
 
-    # ⬇️ ESTE BLOCO PRECISA ESTAR DENTRO DA FUNÇÃO
     if not results:
         print("\nNenhum documento relevante encontrado.")
     else:
