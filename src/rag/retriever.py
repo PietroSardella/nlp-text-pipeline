@@ -2,10 +2,14 @@ import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 
 
-def search(query_vector, document_embeddings, documents,
-           k=2,
-           threshold=0.40,
-           gap_threshold=0.25):
+def search(
+    query_vector: np.ndarray,
+    document_embeddings: np.ndarray,
+    documents: list[str],
+    k: int = 2,
+    threshold: float = 0.40,
+    gap_threshold: float = 0.25
+) -> tuple[list[str], list[float]]:
 
     # 1️⃣ Calcular similaridades
     similarities = cosine_similarity(

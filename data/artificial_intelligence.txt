@@ -1,0 +1,12 @@
+﻿RAG significa Retrieval-Augmented Generation.
+Sistemas RAG recuperam documentos antes de gerar respostas.
+Embeddings transformam texto em vetores numéricos.
+A similaridade cosseno mede proximidade vetorial.
+Modelos de linguagem utilizam aprendizado profundo.
+LangChain é um framework para aplicações com LLMs.
+Agentes de IA podem utilizar ferramentas externas.
+O padrão ReAct combina raciocínio e ação.
+TF-IDF mede relevância lexical de termos.
+Modelos de classificação aprendem padrões a partir de exemplos.
+Vetores densos capturam semântica contextual.
+Indexação vetorial permite busca semântica eficiente.
